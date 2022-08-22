@@ -10,13 +10,10 @@ today = datetime.now()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday = start_date[5:]
-
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
-
 user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
-
 
 def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
@@ -31,7 +28,8 @@ def get_count():
 def get_birthday():
   next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
   if next < datetime.now():
-    next = next.replace(year=next.year + 1)
+    year=next.year + 1
+    next = next.replace(year)
   return (next - today).days
 
 def get_words():
@@ -42,7 +40,6 @@ def get_words():
 
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
-
 
 client = WeChatClient(app_id, app_secret)
 
