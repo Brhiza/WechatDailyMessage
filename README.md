@@ -1,11 +1,21 @@
 # 每日早安推送
 
-**转载**
+## [开源作者指路](https://github.com/rxrw/daily_morning)
 
----------------------- 以下是正文 ----------------------
-
-在我刚想构思这个教程怎么让不懂编程的朋友很快入门的时候，我考虑到：避免服务器搭建，避免定时任务，避免接触代码。在经历过各种思考后，觉得可以用 Github Actions 来白嫖。。
-
+## 正文
+这个教程优点：
+- 不懂编程的朋友可以很快入门的时候，
+- 避免服务器搭建
+- 避免定时任务
+- 避免接触代码
+- 可以用 Github Actions 来白嫖。。
+### 个人效果图
+本仓库在原仓库代码基础上进行更改
+效果图
+![1](https://cdn.jsdelivr.net/gh/fromann/CDN@main/img/githubpic/sendcard/1.png)
+Secrets/Action Key表
+![2](https://cdn.jsdelivr.net/gh/fromann/CDN@main/img/githubpic/sendcard/2.png)
+### 原作者效果图
 效果如图。当然，文字是可以修改的。
 ![5e72e89fd7ff692a0bfa62010517c0c](https://user-images.githubusercontent.com/9566402/183242263-c93517a2-5377-435d-8386-8d47252c9e07.jpg)
 
