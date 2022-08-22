@@ -16,6 +16,7 @@ user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
 
 def get_time():
+  # 年月日 时分 星期
   dictDate={'Monday':'星期一','Tuesday':'星期二','Wednesday':'星期三','Thursday':'星期四','Friday':'星期五','Saturday':'星期六','Sunday':'星期天'}
   a=dictDate[datetime.now().strftime('%A')]
   return datetime.now().strftime("%Y年%m月%d日 %H时%M分 ")+a
@@ -24,7 +25,7 @@ def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
   res = requests.get(url).json()
   weather = res['data']['list'][0]
-  return weather['weather'], math.floor(weather['hign']), math.floor(weather['low']), weather['city']
+  return weather['weather'], math.floor(weather['high']), math.floor(weather['low']), weather['city']
 
 def get_count():
   delta = today - datetime.strptime(start_date, "%Y-%m-%d")
