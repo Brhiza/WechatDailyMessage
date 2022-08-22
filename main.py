@@ -58,7 +58,7 @@ data['tem_high'] = {'value': tem_high, 'color': '#470024'}
 data['tem_low'] = {'value': tem_low, 'color': '#01847F'}
 data['time'] = {'value': get_time(), 'color': get_random_color()}
 data['born_days'] = {'value': get_count(), 'color': get_random_color()}
-data['birthday'] = {'value': get_birthday(), 'color': get_random_color()}
+data['birthday_left'] = {'value': get_birthday(), 'color': get_random_color()}
 data['words'] = {'value': get_words(), 'color': get_random_color()}
 
 res = wm.send_template(user_id, template_id, data)
