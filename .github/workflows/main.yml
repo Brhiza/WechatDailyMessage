@@ -1,4 +1,4 @@
-name: Message
+name: send card
 on:
   schedule:
   - cron:  '0 0 * * *'
@@ -7,7 +7,7 @@ on:
 jobs:
   send_message:
     runs-on: ubuntu-latest
-    name: send morning to your girlfriend
+    name: send card
 
     steps:
     - name: checkout
