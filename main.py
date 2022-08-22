@@ -52,7 +52,7 @@ client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
 wea, tem_high,tem_low,tem_city = get_weather()
-
+data=dict()
 data['weather'] = {'value': wea, 'color': '#002fa4'}
 data['city'] = {'value': city, 'color': get_random_color()}
 data['tem_high'] = {'value': tem_high, 'color': '#470024'}
