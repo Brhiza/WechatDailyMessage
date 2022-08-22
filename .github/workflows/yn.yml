@@ -26,6 +26,6 @@ jobs:
       APP_ID: ${{ secrets.APP_ID }}
       APP_SECRET: ${{ secrets.APP_SECRET }}
       TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
-      USER_ID: 
-      START_DATE: ${{ secrets.START_DATE }}
-      CITY: ${{ secrets.CITY }}
+      USER_ID: 'oEqYm6lh8rBryiyVonJXUqln1GEg'
+      START_DATE: '2002-11-28'
+      CITY: '青岛'
