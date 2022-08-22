@@ -1,4 +1,4 @@
-from datetime import date, datetime
+from datetime import date, datetime, timedelta, timezone
 import math
 from wechatpy import WeChatClient
 from wechatpy.client.api import WeChatMessage, WeChatTemplate
@@ -16,10 +16,11 @@ user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
 
 def get_time():
-  # 年月日 时分 星期
+  datetime获取北京时间
+  BJ_tz = timezone(timedelta(hours=8), 'Asia/Shanghai')
   dictDate={'Monday':'星期一','Tuesday':'星期二','Wednesday':'星期三','Thursday':'星期四','Friday':'星期五','Saturday':'星期六','Sunday':'星期天'}
-  a=dictDate[datetime.now().strftime('%A')]
-  return datetime.now().strftime("%Y年%m月%d日 %H时%M分 ")+a
+  a=dictDate[datetime.now(BJ_tz).strftime('%A')]
+  return datetime.now(BJ_tz).strftime("%Y年%m月%d日 %H时%M分 ")+a
 
 def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
@@ -34,8 +35,7 @@ def get_count():
 def get_birthday():
   next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
   if next < datetime.now():
-    year=next.year + 1
-    next = next.replace(year)
+    next = next.replace(year=next.year + 1)
   return (next - today).days
 
 def get_words():
