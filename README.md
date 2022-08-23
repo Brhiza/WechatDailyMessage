@@ -15,6 +15,22 @@
 ![1](https://cdn.jsdelivr.net/gh/fromann/CDN@main/img/githubpic/sendcard/1.png)
 Secrets/Action Key表
 ![2](https://cdn.jsdelivr.net/gh/fromann/CDN@main/img/githubpic/sendcard/2.png)
+
+当前微信模板
+~~~
+{{time.DATA}}
+
+所在城市: {{city.DATA}}
+
+当前天气：{{weather.DATA}} ~
+最高气温：{{tem_high.DATA}} ℃ ~
+最低气温：{{tem_low.DATA}} ℃ ~
+
+你在这个世界上已经{{born_days.DATA}}天了~ 
+距离你的生日还有{{birthday_left.DATA}}天 ~
+
+{{words.DATA}}
+~~~
 ### 原作者效果图
 效果如图。当然，文字是可以修改的。
 ![5e72e89fd7ff692a0bfa62010517c0c](https://user-images.githubusercontent.com/9566402/183242263-c93517a2-5377-435d-8386-8d47252c9e07.jpg)
